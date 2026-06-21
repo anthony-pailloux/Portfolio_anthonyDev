@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio d'Anthony Pailloux — Développeur web & mobile full stack basé à Bordeaux.">
+  <title>Anthony Pailloux — Développeur web & mobile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a class="header__logo" href="#hero" aria-label="Anthony Pailloux — Accueil">
+        <span class="header__logo-bar" aria-hidden="true"></span>
+        <span class="header__logo-name">Anthony Pailloux</span>
+      </a>
+
+      <button
+        class="header__burger"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        id="burger-btn"
+      >
+        <span class="header__burger-line" aria-hidden="true"></span>
+        <span class="header__burger-line" aria-hidden="true"></span>
+        <span class="header__burger-line" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="nav-menu" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#profil">Profil</a></li>
+          <li><a class="nav__link" href="#approche">Approche</a></li>
+          <li><a class="nav__link" href="#projets">Projets</a></li>
+          <li><a class="nav__link" href="#parcours">Parcours</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero section" id="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow">Anthony Pailloux</p>
+          <h1 class="hero__title" id="hero-title">Développeur web &amp; mobile full stack</h1>
+          <p class="hero__subtitle">
+            Je conçois des applications simples, fiables et maintenables avec JavaScript, React, Node.js, PHP/Symfony et MySQL.
+          </p>
+          <p class="hero__text">
+            Curieux, autonome et impliqué, je cherche à contribuer à des projets concrets tout en continuant à progresser aux côtés de professionnels expérimentés.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projets">Voir mes projets</a>
+            <a class="btn btn--secondary" href="#contact">Me contacter</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="code-window" aria-hidden="true">
+            <div class="code-window__bar">
+              <span class="code-window__dot"></span>
+              <span class="code-window__dot"></span>
+              <span class="code-window__dot"></span>
+            </div>
+            <pre class="code-window__body"><code><span class="code-cmt">// Front-end</span>
+<span class="code-kw">const</span> stack1 = [<span class="code-str">"React"</span>, <span class="code-str">"JavaScript"</span>, <span class="code-str">"HTML5"</span>, <span class="code-str">"CSS3"</span>];
+
+<span class="code-cmt">// Back-end</span>
+<span class="code-kw">const</span> stack2 = [<span class="code-str">"Node.js"</span>, <span class="code-str">"Express"</span>, <span class="code-str">"Symfony"</span>, <span class="code-str">"PHP"</span>, <span class="code-str">"API REST"</span>];
+
+<span class="code-cmt">// Base de données</span>
+<span class="code-kw">const</span> stack3 = [<span class="code-str">"MySQL"</span>, <span class="code-str">"SQL"</span>, <span class="code-str">"Doctrine ORM"</span>, <span class="code-str">"Migrations"</span>];
+
+<span class="code-cmt">// Logiciels &amp; outils</span>
+<span class="code-kw">const</span> stack4 = [<span class="code-str">"Git"</span>, <span class="code-str">"GitHub"</span>, <span class="code-str">"Docker"</span>, <span class="code-str">"Composer"</span>, <span class="code-str">"PHPUnit"</span>];
+
+<span class="code-kw">const</span> mindset = <span class="code-str">"Simple, propre, maintenable"</span>;</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profil -->
+    <section class="section" id="profil" aria-labelledby="profil-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="profil-title">Profil</h2>
+          <p class="section__lead">Qui je suis et comment je travaille.</p>
+        </header>
+
+        <article class="profil reveal">
+          <div class="profil__media">
+            <div class="profil__photo-wrap">
+              <img
+                class="profil__photo"
+                src="assets/anthony-portrait.jpg"
+                alt="Anthony Pailloux"
+                width="200"
+                height="240"
+                loading="eager"
+                decoding="async"
+              >
+            </div>
+            <p class="profil__name">Anthony Pailloux</p>
+            <p class="profil__meta">Bordeaux · Full stack</p>
+          </div>
+
+          <div class="profil__content">
+            <p>
+              Développeur web et mobile basé à Bordeaux, je travaille principalement sur des applications full stack&nbsp;: interfaces utilisateur, API REST, authentification, CRUD, bases de données et déploiement Docker. J'aime comprendre les besoins, structurer proprement le code et livrer des solutions simples plutôt que sur-complexifiées.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Approche (complémentaire à la stack du hero) -->
+    <section class="section section--alt" id="approche" aria-labelledby="approche-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="approche-title">Approche</h2>
+          <p class="section__lead">Ma stack technique est présentée en introduction — voici comment je travaille au quotidien.</p>
+        </header>
+
+        <div class="skills-grid skills-grid--approach">
+
+          <details class="skill-card skill-card--wide card reveal">
+            <summary class="skill-card__summary">
+              <span class="skill-card__title">Pratiques métier</span>
+              <span class="skill-card__chevron" aria-hidden="true"></span>
+            </summary>
+            <ul class="badge-list">
+              <li class="badge">Authentification</li>
+              <li class="badge">CRUD</li>
+              <li class="badge">Gestion des accès</li>
+              <li class="badge">Gestion utilisateurs</li>
+              <li class="badge">API REST</li>
+              <li class="badge">Architecture MVC</li>
+              <li class="badge">Interfaces utilisateur</li>
+              <li class="badge">HTML/CSS responsive</li>
+              <li class="badge">Tableau de bord</li>
+              <li class="badge">Interfaces admin &amp; dashboard</li>
+              <li class="badge">Invitations email</li>
+              <li class="badge">Gestion de catalogue</li>
+              <li class="badge">Logique métier</li>
+              <li class="badge">Migrations versionnées</li>
+              <li class="badge">Tests unitaires</li>
+              <li class="badge">Sécurité applicative</li>
+              <li class="badge">Déploiement Docker</li>
+              <li class="badge">Validation des données</li>
+            </ul>
+          </details>
+
+          <details class="skill-card card reveal">
+            <summary class="skill-card__summary">
+              <span class="skill-card__title">Méthodes</span>
+              <span class="skill-card__chevron" aria-hidden="true"></span>
+            </summary>
+            <ul class="badge-list">
+              <li class="badge">Agile</li>
+              <li class="badge">Scrum</li>
+              <li class="badge">Code simple</li>
+              <li class="badge">Lisibilité</li>
+              <li class="badge">Maintenance</li>
+            </ul>
+          </details>
+
+          <details class="skill-card card reveal">
+            <summary class="skill-card__summary">
+              <span class="skill-card__title">Assistants IA</span>
+              <span class="skill-card__chevron" aria-hidden="true"></span>
+            </summary>
+            <ul class="badge-list">
+              <li class="badge">Cursor</li>
+              <li class="badge">Claude Code</li>
+              <li class="badge">Codex</li>
+              <li class="badge">MCP</li>
+              <li class="badge">Skills</li>
+            </ul>
+          </details>
+
+          <details class="skill-card card reveal">
+            <summary class="skill-card__summary">
+              <span class="skill-card__title">Soft skills</span>
+              <span class="skill-card__chevron" aria-hidden="true"></span>
+            </summary>
+            <ul class="badge-list">
+              <li class="badge">Curieux</li>
+              <li class="badge">Persévérant</li>
+              <li class="badge">Autonome</li>
+              <li class="badge">Rigoureux</li>
+              <li class="badge">Esprit d'équipe</li>
+              <li class="badge">À l'écoute</li>
+            </ul>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section class="section" id="projets" aria-labelledby="projets-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="projets-title">Projets</h2>
+          <p class="section__lead">Quelques réalisations concrètes.</p>
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project-card card reveal">
+            <header class="project-card__header">
+              <h3 class="project-card__title">CoachService</h3>
+              <p class="project-card__subtitle">Application de gestion de club de football</p>
+              <p class="project-card__meta">Projet personnel · développé en parallèle</p>
+            </header>
+            <p class="project-card__desc">
+              Application Symfony en architecture MVC permettant de gérer les joueurs, entraînements, présences, matchs, matériel, abonnements et paiements, avec un tableau de bord.
+            </p>
+            <div class="project-card__tech">
+              <span class="badge badge--tech">PHP</span>
+              <span class="badge badge--tech">Symfony</span>
+              <span class="badge badge--tech">Doctrine</span>
+              <span class="badge badge--tech">Twig</span>
+              <span class="badge badge--tech">MySQL</span>
+              <span class="badge badge--tech">PHPUnit</span>
+            </div>
+            <ul class="project-card__points">
+              <li>Architecture MVC</li>
+              <li>Gestion métier complète</li>
+              <li>Migrations versionnées</li>
+              <li>Tableau de bord</li>
+              <li>Tests unitaires</li>
+            </ul>
+          </article>
+
+          <article class="project-card card reveal">
+            <header class="project-card__header">
+              <h3 class="project-card__title">AimSniper</h3>
+              <p class="project-card__subtitle">Jeu web d'entraînement à la visée</p>
+              <p class="project-card__meta">Projet personnel · développé en parallèle</p>
+            </header>
+            <p class="project-card__desc">
+              Jeu navigateur développé avec JavaScript, CSS et PHP, centré sur les interactions utilisateur, la logique de jeu et le traitement côté serveur.
+            </p>
+            <div class="project-card__tech">
+              <span class="badge badge--tech">JavaScript</span>
+              <span class="badge badge--tech">PHP</span>
+              <span class="badge badge--tech">CSS</span>
+            </div>
+            <ul class="project-card__points">
+              <li>Logique de jeu en JavaScript</li>
+              <li>Interface dynamique</li>
+              <li>Interactions utilisateur</li>
+              <li>Traitement serveur simple</li>
+              <li>Design responsive CSS</li>
+            </ul>
+          </article>
+
+          <article class="project-card card reveal">
+            <header class="project-card__header">
+              <h3 class="project-card__title">Plateforme Festival IA — MarsAI</h3>
+              <p class="project-card__subtitle">Interface et API pour une plateforme événementielle</p>
+              <p class="project-card__meta">Eureka Intérim — pour le client L'Atelier</p>
+            </header>
+            <p class="project-card__desc">
+              Développement d'une interface React et d'une API REST avec Node.js et Express pour la gestion des utilisateurs, invitations par email, authentification et accès administrateur.
+            </p>
+            <div class="project-card__tech">
+              <span class="badge badge--tech">React</span>
+              <span class="badge badge--tech">JavaScript</span>
+              <span class="badge badge--tech">Node.js</span>
+              <span class="badge badge--tech">Express</span>
+              <span class="badge badge--tech">API REST</span>
+              <span class="badge badge--tech">Git</span>
+            </div>
+            <ul class="project-card__points">
+              <li>Interface utilisateur</li>
+              <li>API REST</li>
+              <li>Authentification</li>
+              <li>Administration</li>
+              <li>Travail collaboratif Git/GitHub</li>
+            </ul>
+          </article>
+
+          <article class="project-card card reveal">
+            <header class="project-card__header">
+              <h3 class="project-card__title">Application de gestion de médiathèque</h3>
+              <p class="project-card__subtitle">Catalogue, utilisateurs et authentification</p>
+              <p class="project-card__meta">Eureka Intérim — pour le client L'Atelier</p>
+            </header>
+            <p class="project-card__desc">
+              Application web en HTML, CSS, JavaScript et PHP avec gestion de catalogue, utilisateurs, authentification et base de données SQL.
+            </p>
+            <div class="project-card__tech">
+              <span class="badge badge--tech">HTML5</span>
+              <span class="badge badge--tech">CSS3</span>
+              <span class="badge badge--tech">JavaScript</span>
+              <span class="badge badge--tech">PHP</span>
+              <span class="badge badge--tech">SQL</span>
+            </div>
+            <ul class="project-card__points">
+              <li>CRUD</li>
+              <li>Authentification</li>
+              <li>Gestion utilisateurs</li>
+              <li>Gestion de catalogue</li>
+              <li>Base de données SQL</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours -->
+    <section class="section section--alt" id="parcours" aria-labelledby="parcours-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="parcours-title">Parcours</h2>
+          <p class="section__lead">Formation, expériences et évolution professionnelle.</p>
+        </header>
+
+        <ol class="timeline reveal">
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2025">2025 — aujourd'hui</time>
+              <h3 class="timeline__title">Formation Développeur Web &amp; Mobile</h3>
+              <p class="timeline__org">Eureka Intérim avec la plateforme</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2026-01/2026-03">Janvier 2026 — Mars 2026</time>
+              <h3 class="timeline__title">Développeur Web — Plateforme Festival IA MarsAI</h3>
+              <p class="timeline__org">Eureka Intérim — pour le client L'Atelier</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2025/2026">2025 — 2026</time>
+              <h3 class="timeline__title">Formation Développeur Web &amp; Mobile</h3>
+              <p class="timeline__org">Eureka Intérim avec la plateforme</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2025-08/2025-09">Août 2025 — Septembre 2025</time>
+              <h3 class="timeline__title">Développeur Web — Application de gestion de médiathèque</h3>
+              <p class="timeline__org">Eureka Intérim — pour le client L'Atelier</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2025/2026">2025 — 2026</time>
+              <h3 class="timeline__title">Formation Développeur Web &amp; Mobile</h3>
+              <p class="timeline__org">Eureka Intérim avec la plateforme</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2018/2025-04">2018 — 11 avril 2025</time>
+              <h3 class="timeline__title">Opérateur d'installation et manutention</h3>
+              <p class="timeline__org">Saft Bordeaux — TotalEnergies, Gironde (33)</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2015/2018">2015 — 2018</time>
+              <h3 class="timeline__title">Conception produits &amp; préparation de commandes</h3>
+              <p class="timeline__org">Eurowale, Gironde (33) — quincaillerie, manutention et déchargement containers</p>
+            </div>
+          </li>
+
+          <li class="timeline__item timeline__item--evolution">
+            <div class="timeline__marker timeline__marker--evolution" aria-hidden="true"></div>
+            <p class="timeline__evolution">
+              <strong>Déménagement</strong> — départ du 91 (Étampes) pour venir m'installer à Bordeaux.
+            </p>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2010/2014">2010 — 2014</time>
+              <h3 class="timeline__title">Contremaître</h3>
+              <p class="timeline__org">DAMOLIN, Étréchy, Essonne (91)</p>
+              <p class="timeline__detail">Organisation des expéditions, chargements et arrivages de matières premières. Veille au bon fonctionnement des machines et à la disponibilité du matériel. Pilotage de la production (quantités, qualité, délais, coûts). Gestion humaine de l'équipe et coordination du travail sur le terrain. Application des procédures de gestion des non-conformités et appui au service maintenance.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item timeline__item--evolution">
+            <div class="timeline__marker timeline__marker--evolution" aria-hidden="true"></div>
+            <p class="timeline__evolution">
+              <strong>Évolution interne</strong> — promotion de conducteur de ligne à contremaître, grâce à mes compétences, mon sérieux et mon implication.
+            </p>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2008/2010">2008 — 2010</time>
+              <h3 class="timeline__title">Conducteur de ligne</h3>
+              <p class="timeline__org">DAMOLIN, Étréchy, Essonne (91)</p>
+              <p class="timeline__detail">Production de conditionnement de produit absorbant et manutention.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2005/2008">2005 — 2008</time>
+              <h3 class="timeline__title">Magasinier-vendeur</h3>
+              <p class="timeline__org">Renault Rempart, Essonne (91)</p>
+              <p class="timeline__detail">Vente, gestion de stock, manutention et conseil auprès des clients.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <time class="timeline__date" datetime="2004/2005">2004 — 2005</time>
+              <h3 class="timeline__title">Manœuvre — aide maçon</h3>
+              <p class="timeline__org">JEAN LEFEBVRE, Grigny, Essonne (91)</p>
+              <p class="timeline__detail">Terrassement, découpe et pose de bordures.</p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p class="section__lead">Un projet, une question&nbsp;? Écrivez-moi.</p>
+        </header>
+
+        <div class="contact reveal">
+          <form
+            class="contact-form card"
+            id="contact-form"
+            action="send-mail.php"
+            method="POST"
+            novalidate
+          >
+            <p class="contact-form__notice">
+              Votre message m'est transmis directement par email. Aucune donnée n'est enregistrée sur ce site.
+            </p>
+
+            <div class="visually-hidden" aria-hidden="true">
+              <label for="website">Ne pas remplir ce champ</label>
+              <input
+                type="text"
+                id="website"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off"
+              >
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="name">Nom</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+              >
+              <span class="form-error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              >
+              <span class="form-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Sujet</label>
+              <input
+                class="form-input"
+                type="text"
+                id="subject"
+                name="subject"
+                required
+              >
+              <span class="form-error" id="subject-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea
+                class="form-input form-textarea"
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+              <span class="form-error" id="message-error" role="alert"></span>
+            </div>
+
+            <button class="btn btn--primary btn--full" type="submit">Envoyer le message</button>
+
+            <p class="form-success" id="form-success" role="status" hidden></p>
+          </form>
+
+          <aside class="contact-info card">
+            <h3 class="contact-info__title">Coordonnées</h3>
+            <ul class="contact-info__list">
+              <li>
+                <span class="contact-info__label">Email</span>
+                <a href="mailto:anthonypailloux.dev@gmail.com">anthonypailloux.dev@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-info__label">LinkedIn</span>
+                <a href="https://linkedin.com/in/anthony-pailloux" target="_blank" rel="noopener noreferrer">linkedin.com/in/anthony-pailloux</a>
+              </li>
+              <li>
+                <span class="contact-info__label">Localisation</span>
+                <span>Bordeaux, France</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Anthony Pailloux. Portfolio développeur web &amp; mobile.</p>
+      <p class="footer__tagline">Code simple. Interfaces claires. Solutions maintenables.</p>
+      <ul class="footer__links">
+        <li>
+          <a href="https://linkedin.com/in/anthony-pailloux" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li>
+          <a href="mailto:anthonypailloux.dev@gmail.com">Email</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top-btn" aria-label="Retour en haut de page" title="Retour en haut">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

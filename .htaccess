@@ -1,0 +1,21 @@
+# Bloquer l'accès direct à la configuration
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Forcer HTTPS (o2switch fournit un certificat Let's Encrypt gratuit)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Empêcher l'affichage du listing de répertoire
+Options -Indexes
+
+# En-têtes de sécurité de base
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

@@ -1,0 +1,15 @@
+# Configuration locale (copiez config.sample.php et adaptez les valeurs)
+config.php
+
+# Fichiers temporaires
+*.log
+*.tmp
+
+# Système (Windows / macOS)
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Éditeur
+.vscode/
+.idea/
