@@ -17,10 +17,7 @@ Porfolio/
 ├── config.php             # Configuration locale (non versionnée)
 ├── .htaccess              # HTTPS, sécurité, protection config
 ├── assets/
-│   ├── anthony-portrait-400.jpg
-│   ├── anthony-portrait-800.jpg
-│   └── anthony-portrait-source.jpg
-├── DEPLOIEMENT-O2SWITCH.md
+│   └── anthony-portrait.jpg
 └── README.md
 ```
 
@@ -36,13 +33,9 @@ cp config.sample.php config.php
 
 ## Déploiement sur o2switch
 
-Consultez le guide détaillé : **[DEPLOIEMENT-O2SWITCH.md](DEPLOIEMENT-O2SWITCH.md)**
-
-Résumé :
-
 1. Créer une adresse email dans cPanel o2switch (`noreply@votredomaine.fr`)
 2. Copier `config.sample.php` → `config.php` et configurer les adresses
-3. Uploader les fichiers dans `public_html/`
+3. Uploader les fichiers dans `public_html/` (inclure `assets/anthony-portrait.jpg`)
 4. Tester le formulaire de contact en production
 
 ## Formulaire de contact
@@ -75,4 +68,3 @@ L'envoi passe par `send-mail.php` qui utilise la fonction PHP `mail()` native d'
 
 **Anthony Pailloux** — Développeur web & mobile full stack  
 [LinkedIn](https://linkedin.com/in/anthony-pailloux) · [anthonypailloux.dev@gmail.com](mailto:anthonypailloux.dev@gmail.com)
-"# Portfolio_anthonyDev" 

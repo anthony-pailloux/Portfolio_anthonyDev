@@ -4,6 +4,10 @@
 
 const FORM_SUCCESS =
   "Votre message a bien été envoyé. Je vous répondrai dès que possible.";
+const FORM_ERROR_TECHNICAL =
+  "Une erreur technique est survenue. Contactez-moi directement par email.";
+const FORM_ERROR_NETWORK =
+  "Impossible d'envoyer le message pour le moment. Contactez-moi directement par email.";
 
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
@@ -161,23 +165,14 @@ function initContactForm() {
         if (data?.errors) {
           applyServerErrors(data.errors);
         }
-        setFeedback(
-          feedback,
-          data?.message ??
-            "Une erreur technique est survenue. Contactez-moi directement par email.",
-          false
-        );
+        setFeedback(feedback, data?.message ?? FORM_ERROR_TECHNICAL, false);
         return;
       }
 
       form.reset();
       setFeedback(feedback, data.message || FORM_SUCCESS, true);
     } catch {
-      setFeedback(
-        feedback,
-        "Impossible d'envoyer le message pour le moment. Contactez-moi directement par email.",
-        false
-      );
+      setFeedback(feedback, FORM_ERROR_NETWORK, false);
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;

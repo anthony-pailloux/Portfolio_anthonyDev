@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio d'Anthony Pailloux — Développeur web & mobile full stack basé à Bordeaux.">
   <title>Anthony Pailloux — Développeur web & mobile</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -13,9 +13,25 @@
 
   <header class="header" id="header">
     <div class="header__inner container">
-      <a class="header__logo" href="#hero" aria-label="Anthony Pailloux — Accueil">
-        <span class="header__logo-bar" aria-hidden="true"></span>
-        <span class="header__logo-name">Anthony Pailloux</span>
+      <a class="header__logo" href="#hero" aria-label="ANTHONY_DEV — Accueil">
+        <span class="header__logo-mark" aria-hidden="true">
+          <svg class="header__logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="header-logo-grad" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0f766e"/>
+                <stop offset="1" stop-color="#2dd4bf"/>
+              </linearGradient>
+            </defs>
+            <rect class="header__logo-bg" x="1.5" y="1.5" width="37" height="37" rx="9.5" stroke="url(#header-logo-grad)" stroke-width="1.5"/>
+            <path class="header__logo-bracket" d="M13.5 11.5C13.5 11.5 11 14.5 11 20C11 25.5 13.5 28.5 13.5 28.5"/>
+            <path class="header__logo-bracket" d="M26.5 11.5C26.5 11.5 29 14.5 29 20C29 25.5 26.5 28.5 26.5 28.5"/>
+            <path class="header__logo-a" d="M20 11.5L26.25 28.5H23.75L22.35 24.5H17.65L16.25 28.5H13.75L20 11.5ZM18.1 22.3H21.9L20 16.6L18.1 22.3Z"/>
+            <rect class="header__logo-cursor" x="14" y="31.5" width="12" height="2" rx="1"/>
+          </svg>
+        </span>
+        <span class="header__logo-text">
+          <span class="header__logo-name">ANTHONY</span><span class="header__logo-suffix">_DEV</span>
+        </span>
       </a>
 
       <button
@@ -47,7 +63,6 @@
 
   <main id="main">
 
-    <!-- Hero -->
     <section class="hero section" id="hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__content reveal">
@@ -65,7 +80,7 @@
           </div>
         </div>
 
-        <div class="hero__visual reveal">
+        <div class="hero__visual">
           <div class="code-window" aria-hidden="true">
             <div class="code-window__bar">
               <span class="code-window__dot"></span>
@@ -90,7 +105,6 @@
       </div>
     </section>
 
-    <!-- Profil -->
     <section class="section" id="profil" aria-labelledby="profil-title">
       <div class="container">
         <header class="section__header reveal">
@@ -124,7 +138,6 @@
       </div>
     </section>
 
-    <!-- Approche (complémentaire à la stack du hero) -->
     <section class="section section--alt" id="approche" aria-labelledby="approche-title">
       <div class="container">
         <header class="section__header reveal">
@@ -208,7 +221,6 @@
       </div>
     </section>
 
-    <!-- Projets -->
     <section class="section" id="projets" aria-labelledby="projets-title">
       <div class="container">
         <header class="section__header reveal">
@@ -322,7 +334,6 @@
       </div>
     </section>
 
-    <!-- Parcours -->
     <section class="section section--alt" id="parcours" aria-labelledby="parcours-title">
       <div class="container">
         <header class="section__header reveal">
@@ -330,7 +341,7 @@
           <p class="section__lead">Formation, expériences et évolution professionnelle.</p>
         </header>
 
-        <ol class="timeline reveal">
+        <ol class="timeline">
 
           <li class="timeline__item">
             <div class="timeline__marker" aria-hidden="true"></div>
@@ -453,7 +464,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <header class="section__header reveal">
@@ -544,7 +554,7 @@
             <ul class="contact-info__list">
               <li>
                 <span class="contact-info__label">Email</span>
-                <a href="mailto:anthonypailloux.dev@gmail.com">anthonypailloux.dev@gmail.com</a>
+                <a href="mailto:contact@anthonydev.fr">contact@anthonydev.fr</a>
               </li>
               <li>
                 <span class="contact-info__label">LinkedIn</span>
@@ -571,7 +581,7 @@
           <a href="https://linkedin.com/in/anthony-pailloux" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </li>
         <li>
-          <a href="mailto:anthonypailloux.dev@gmail.com">Email</a>
+          <a href="mailto:contact@anthonydev.fr">Email</a>
         </li>
       </ul>
     </div>
@@ -583,6 +593,6 @@
     </svg>
   </button>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
