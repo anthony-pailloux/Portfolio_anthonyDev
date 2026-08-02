@@ -3,9 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio d'Anthony Pailloux — Développeur web & mobile full stack basé à Bordeaux.">
-  <title>Anthony Pailloux — Développeur web & mobile</title>
-  <link rel="stylesheet" href="style.css?v=9">
+  <meta name="description" content="Anthony Pailloux, développeur web &amp; mobile full stack à Bordeaux. React, Node.js, PHP/Symfony, MySQL. Découvrez mes projets et contactez-moi.">
+  <title>Anthony Pailloux — Développeur web &amp; mobile full stack · Bordeaux</title>
+  <link rel="canonical" href="https://anthonydev.fr/">
+  <meta name="theme-color" content="#0f766e">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anthonydev.fr/">
+  <meta property="og:title" content="Anthony Pailloux — Développeur web &amp; mobile full stack · Bordeaux">
+  <meta property="og:description" content="Portfolio d'Anthony Pailloux — Développeur full stack à Bordeaux. React, Node.js, PHP/Symfony, MySQL.">
+  <meta property="og:image" content="https://anthonydev.fr/assets/anthony-portrait.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@AnthonyDev_Fr">
+  <meta name="twitter:title" content="Anthony Pailloux — Développeur web &amp; mobile full stack · Bordeaux">
+  <meta name="twitter:description" content="Portfolio full stack à Bordeaux — React, Node.js, Symfony, MySQL.">
+  <meta name="twitter:image" content="https://anthonydev.fr/assets/anthony-portrait.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css?v=12">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anthony Pailloux",
+    "jobTitle": "Développeur web & mobile full stack",
+    "url": "https://anthonydev.fr",
+    "email": "contact@anthonydev.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bordeaux",
+      "addressCountry": "FR"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/anthony-pailloux",
+      "https://x.com/AnthonyDev_Fr"
+    ],
+    "knowsAbout": ["React", "Node.js", "PHP", "Symfony", "MySQL", "JavaScript", "API REST", "Docker"]
+  }
+  </script>
 </head>
 <body>
 
@@ -118,7 +157,7 @@
               <img
                 class="profil__photo"
                 src="assets/anthony-portrait.jpg"
-                alt="Anthony Pailloux"
+                alt="Anthony Pailloux, développeur web et mobile full stack à Bordeaux"
                 width="200"
                 height="240"
                 loading="eager"
@@ -131,7 +170,7 @@
 
           <div class="profil__content">
             <p>
-              Développeur web et mobile basé à Bordeaux, je travaille principalement sur des applications full stack&nbsp;: interfaces utilisateur, API REST, authentification, CRUD, bases de données et déploiement Docker. J'aime comprendre les besoins, structurer proprement le code et livrer des solutions simples plutôt que sur-complexifiées.
+              Développeur web et mobile basé à Bordeaux, je travaille principalement sur des applications full stack&nbsp;: interfaces utilisateur, API REST, authentification, CRUD, bases de données et déploiement. J'aime comprendre les besoins, structurer proprement le code et livrer des solutions simples plutôt que sur-complexifiées.
             </p>
           </div>
         </article>
@@ -231,62 +270,18 @@
         <div class="projects-grid">
 
           <article class="project-card card reveal">
-            <header class="project-card__header">
-              <h3 class="project-card__title">CoachService</h3>
-              <p class="project-card__subtitle">Application de gestion de club de football</p>
-              <p class="project-card__meta">Projet personnel · développé en parallèle</p>
-            </header>
+            <details class="project-card__details">
+              <summary class="project-card__summary">
+                <span class="project-card__header">
+                  <h3 class="project-card__title">Cook'île &amp; Co</h3>
+                  <p class="project-card__subtitle">Application de recettes antillaises et du monde</p>
+                  <p class="project-card__meta">Projet passage à l'examen bac+2</p>
+                </span>
+                <span class="project-card__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="project-card__body">
             <p class="project-card__desc">
-              Application Symfony en architecture MVC permettant de gérer les joueurs, entraînements, présences, matchs, matériel, abonnements et paiements, avec un tableau de bord.
-            </p>
-            <div class="project-card__tech">
-              <span class="badge badge--tech">PHP</span>
-              <span class="badge badge--tech">Symfony</span>
-              <span class="badge badge--tech">Doctrine</span>
-              <span class="badge badge--tech">Twig</span>
-              <span class="badge badge--tech">MySQL</span>
-              <span class="badge badge--tech">PHPUnit</span>
-            </div>
-            <ul class="project-card__points">
-              <li>Architecture MVC</li>
-              <li>Gestion métier complète</li>
-              <li>Migrations versionnées</li>
-              <li>Tableau de bord</li>
-              <li>Tests unitaires</li>
-            </ul>
-          </article>
-
-          <article class="project-card card reveal">
-            <header class="project-card__header">
-              <h3 class="project-card__title">AimSniper</h3>
-              <p class="project-card__subtitle">Jeu web d'entraînement à la visée</p>
-              <p class="project-card__meta">Projet personnel · développé en parallèle</p>
-            </header>
-            <p class="project-card__desc">
-              Jeu navigateur développé avec JavaScript, CSS et PHP, centré sur les interactions utilisateur, la logique de jeu et le traitement côté serveur.
-            </p>
-            <div class="project-card__tech">
-              <span class="badge badge--tech">JavaScript</span>
-              <span class="badge badge--tech">PHP</span>
-              <span class="badge badge--tech">CSS</span>
-            </div>
-            <ul class="project-card__points">
-              <li>Logique de jeu en JavaScript</li>
-              <li>Interface dynamique</li>
-              <li>Interactions utilisateur</li>
-              <li>Traitement serveur simple</li>
-              <li>Design responsive CSS</li>
-            </ul>
-          </article>
-
-          <article class="project-card card reveal">
-            <header class="project-card__header">
-              <h3 class="project-card__title">Plateforme Festival IA — MarsAI</h3>
-              <p class="project-card__subtitle">Interface et API pour une plateforme événementielle</p>
-              <p class="project-card__meta">Eureka Intérim — pour le client L'Atelier</p>
-            </header>
-            <p class="project-card__desc">
-              Développement d'une interface React et d'une API REST avec Node.js et Express pour la gestion des utilisateurs, invitations par email, authentification et accès administrateur.
+              Application full stack pour découvrir et préparer des recettes internationales : catalogue public avec recherche et filtres, fiches détaillées, et espace d'administration pour gérer le contenu via une API REST.
             </p>
             <div class="project-card__tech">
               <span class="badge badge--tech">React</span>
@@ -294,40 +289,161 @@
               <span class="badge badge--tech">Node.js</span>
               <span class="badge badge--tech">Express</span>
               <span class="badge badge--tech">API REST</span>
-              <span class="badge badge--tech">Git</span>
+              <span class="badge badge--tech">MySQL</span>
             </div>
-            <ul class="project-card__points">
-              <li>Interface utilisateur</li>
-              <li>API REST</li>
-              <li>Authentification</li>
-              <li>Administration</li>
-              <li>Travail collaboratif Git/GitHub</li>
-            </ul>
+            <div class="project-card__points-wrap">
+              <ul class="project-card__points">
+                <li>Interface React (catalogue et fiches recettes)</li>
+                <li>API REST Node.js / Express</li>
+                <li>Recherche et filtres (origine, catégorie, type de repas)</li>
+                <li>Espace admin (CRUD recettes)</li>
+                <li>Base de données MySQL avec Sequelize</li>
+              </ul>
+              <a class="btn btn--secondary btn--full" href="https://www.cookileandco.fr/" target="_blank" rel="noopener noreferrer">Voir le site</a>
+            </div>
+              </div>
+            </details>
           </article>
 
           <article class="project-card card reveal">
-            <header class="project-card__header">
-              <h3 class="project-card__title">Application de gestion de médiathèque</h3>
-              <p class="project-card__subtitle">Catalogue, utilisateurs et authentification</p>
-              <p class="project-card__meta">Eureka Intérim — pour le client L'Atelier</p>
-            </header>
+            <details class="project-card__details">
+              <summary class="project-card__summary">
+                <span class="project-card__header">
+                  <h3 class="project-card__title">GunShotAim</h3>
+              <p class="project-card__subtitle">Aim trainer FPS gratuit en ligne</p>
+              <p class="project-card__meta">Projet personnel · en ligne sur gunshotaim.com</p>
+                </span>
+                <span class="project-card__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="project-card__body">
             <p class="project-card__desc">
-              Application web en HTML, CSS, JavaScript et PHP avec gestion de catalogue, utilisateurs, authentification et base de données SQL.
+              Jeu d'entraînement à la visée FPS dans le navigateur : mode Flick disponible, autres arènes en préparation, avec parties libres ou classées, classement en ligne et suivi des performances.
             </p>
             <div class="project-card__tech">
-              <span class="badge badge--tech">HTML5</span>
-              <span class="badge badge--tech">CSS3</span>
-              <span class="badge badge--tech">JavaScript</span>
+              <span class="badge badge--tech">React</span>
+              <span class="badge badge--tech">Laravel</span>
               <span class="badge badge--tech">PHP</span>
-              <span class="badge badge--tech">SQL</span>
+              <span class="badge badge--tech">MySQL</span>
+              <span class="badge badge--tech">Tailwind CSS</span>
+              <span class="badge badge--tech">API REST</span>
             </div>
-            <ul class="project-card__points">
-              <li>CRUD</li>
-              <li>Authentification</li>
-              <li>Gestion utilisateurs</li>
-              <li>Gestion de catalogue</li>
-              <li>Base de données SQL</li>
-            </ul>
+            <div class="project-card__points-wrap">
+              <ul class="project-card__points">
+                <li>Mode Flick disponible (Tracking, Gridshot… en prépa)</li>
+                <li>Jeu libre ou parties classées avec compte</li>
+                <li>Classement en ligne</li>
+                <li>Statistiques et progression personnelle</li>
+                <li>Interface multilingue</li>
+              </ul>
+              <a class="btn btn--secondary btn--full" href="https://gunshotaim.com" target="_blank" rel="noopener noreferrer">Voir le site</a>
+            </div>
+              </div>
+            </details>
+          </article>
+
+          <article class="project-card card reveal">
+            <details class="project-card__details">
+              <summary class="project-card__summary">
+                <span class="project-card__header">
+                  <h3 class="project-card__title">Plateforme Festival IA — MarsAI</h3>
+              <p class="project-card__subtitle">Festival de courts métrages IA — plateforme web</p>
+              <p class="project-card__meta">Eureka Intérim — pour le client L'Atelier · projet d'équipe</p>
+                </span>
+                <span class="project-card__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="project-card__body">
+            <p class="project-card__desc">
+              Plateforme full stack pour le festival MarsAI : soumission et gestion de courts métrages IA, espace public (événements, galerie, jury), administration multi-rôles avec invitations et authentification JWT, plus intégrations S3, email et reCAPTCHA.
+            </p>
+            <div class="project-card__tech">
+              <span class="badge badge--tech">React</span>
+              <span class="badge badge--tech">Node.js</span>
+              <span class="badge badge--tech">Express</span>
+              <span class="badge badge--tech">MySQL</span>
+              <span class="badge badge--tech">Tailwind CSS</span>
+              <span class="badge badge--tech">JWT</span>
+            </div>
+            <div class="project-card__points-wrap">
+              <ul class="project-card__points">
+                <li>Interface React (Vite) multilingue</li>
+                <li>API REST Express / MySQL</li>
+                <li>Soumission et modération de vidéos</li>
+                <li>Administration multi-rôles</li>
+                <li>Intégrations S3, SMTP, reCAPTCHA</li>
+              </ul>
+            </div>
+              </div>
+            </details>
+          </article>
+
+          <article class="project-card card reveal">
+            <details class="project-card__details">
+              <summary class="project-card__summary">
+                <span class="project-card__header">
+                  <h3 class="project-card__title">Application de gestion de médiathèque</h3>
+              <p class="project-card__subtitle">Catalogue multimédia, emprunts et administration</p>
+              <p class="project-card__meta">Eureka Intérim — pour le client L'Atelier</p>
+                </span>
+                <span class="project-card__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="project-card__body">
+            <p class="project-card__desc">
+              Application web PHP en architecture MVC procédurale pour gérer une médiathèque : catalogue de livres, films et jeux avec recherche et filtres, emprunts et retours, espace d'administration et authentification sécurisée (PDO, CSRF).
+            </p>
+            <div class="project-card__tech">
+              <span class="badge badge--tech">PHP</span>
+              <span class="badge badge--tech">MySQL</span>
+              <span class="badge badge--tech">PDO</span>
+              <span class="badge badge--tech">HTML</span>
+              <span class="badge badge--tech">CSS</span>
+              <span class="badge badge--tech">JavaScript</span>
+            </div>
+            <div class="project-card__points-wrap">
+              <ul class="project-card__points">
+                <li>Architecture MVC procédurale</li>
+                <li>Catalogue avec recherche et filtres</li>
+                <li>Emprunts et retours (règles métier)</li>
+                <li>Espace admin (CRUD médias)</li>
+                <li>Authentification et protection CSRF</li>
+              </ul>
+            </div>
+              </div>
+            </details>
+          </article>
+
+          <article class="project-card card reveal">
+            <details class="project-card__details">
+              <summary class="project-card__summary">
+                <span class="project-card__header">
+                  <h3 class="project-card__title">CoachService</h3>
+              <p class="project-card__subtitle">Gestion de club de football (en cours)</p>
+              <p class="project-card__meta">Projet personnel · en cours de développement</p>
+                </span>
+                <span class="project-card__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="project-card__body">
+            <p class="project-card__desc">
+              Projet Symfony 7.4 en cours pour la gestion d'un club de football : base MVC avec Doctrine, Docker et PostgreSQL, en vue de couvrir joueurs, entraînements, matchs, matériel et abonnements.
+            </p>
+            <div class="project-card__tech">
+              <span class="badge badge--tech">PHP</span>
+              <span class="badge badge--tech">Symfony</span>
+              <span class="badge badge--tech">Doctrine</span>
+              <span class="badge badge--tech">Twig</span>
+              <span class="badge badge--tech">PostgreSQL</span>
+              <span class="badge badge--tech">Docker</span>
+            </div>
+            <div class="project-card__points-wrap">
+              <ul class="project-card__points">
+                <li>Architecture Symfony MVC</li>
+                <li>Doctrine ORM et migrations</li>
+                <li>PostgreSQL via Docker</li>
+                <li>Structure prête pour le métier club</li>
+                <li>PHPUnit configuré</li>
+              </ul>
+            </div>
+              </div>
+            </details>
           </article>
 
         </div>
@@ -346,7 +462,7 @@
           <li class="timeline__item">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content card">
-              <time class="timeline__date" datetime="2025">2025 — aujourd'hui</time>
+              <time class="timeline__date" datetime="2025">2025 — à aujourd'hui 2026</time>
               <h3 class="timeline__title">Formation Développeur Web &amp; Mobile</h3>
               <p class="timeline__org">Eureka Intérim avec la plateforme</p>
             </div>
@@ -561,6 +677,10 @@
                 <a href="https://linkedin.com/in/anthony-pailloux" target="_blank" rel="noopener noreferrer">linkedin.com/in/anthony-pailloux</a>
               </li>
               <li>
+                <span class="contact-info__label">X</span>
+                <a href="https://x.com/AnthonyDev_Fr" target="_blank" rel="noopener noreferrer">@AnthonyDev_Fr</a>
+              </li>
+              <li>
                 <span class="contact-info__label">Localisation</span>
                 <span>Bordeaux, France</span>
               </li>
@@ -579,6 +699,9 @@
       <ul class="footer__links">
         <li>
           <a href="https://linkedin.com/in/anthony-pailloux" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://x.com/AnthonyDev_Fr" target="_blank" rel="noopener noreferrer">X</a>
         </li>
         <li>
           <a href="mailto:contact@anthonydev.fr">Email</a>
