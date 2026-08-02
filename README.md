@@ -15,9 +15,13 @@ Porfolio/
 ├── send-mail.php          # Traitement serveur de l'envoi email
 ├── config.sample.php      # Modèle de configuration
 ├── config.php             # Configuration locale (non versionnée)
-├── .htaccess              # HTTPS, sécurité, protection config
+├── .htaccess              # HTTPS, redirections, sécurité
+├── favicon.svg
+├── robots.txt
+├── sitemap.xml
 ├── assets/
-│   └── anthony-portrait.jpg
+│   ├── anthony-portrait.jpg
+│   └── og-image.jpg       # Image Open Graph (partage LinkedIn / X)
 └── README.md
 ```
 
@@ -33,9 +37,58 @@ cp config.sample.php config.php
 
 ## Déploiement sur o2switch
 
-1. Créer une adresse email dans cPanel o2switch (`noreply@votredomaine.fr`)
+### Fichiers à mettre dans `public_html/`
+
+| Fichier | Obligatoire |
+|---------|-------------|
+| `index.html` | oui |
+| `style.css` | oui |
+| `script.js` | oui |
+| `send-mail.php` | oui |
+| `.htaccess` | oui |
+| `favicon.svg` | oui |
+| `robots.txt` | oui |
+| `sitemap.xml` | oui |
+| `assets/anthony-portrait.jpg` | oui |
+| `assets/og-image.jpg` | oui |
+| `config.php` | oui (sur le serveur uniquement) |
+
+**Ne pas uploader** : `.git/`, `.gitignore`, `.gitattributes`, `README.md`, `config.sample.php`
+
+### Méthode 1 — FTP / Gestionnaire de fichiers cPanel
+
+1. Connexion cPanel o2switch → **Gestionnaire de fichiers** → `public_html/`
+2. Uploader ou remplacer les fichiers listés ci-dessus (conserver le dossier `assets/`)
+3. **`config.php`** : ne pas écraser si déjà configuré sur le serveur. Sinon :
+   ```bash
+   cp config.sample.php config.php
+   ```
+   puis adapter `recipient` et `from_email` (adresse créée dans cPanel → Comptes de messagerie)
+4. Vérifier les permissions : fichiers `644`, dossiers `755`
+
+### Méthode 2 — Git (si dépôt cloné dans `public_html/`)
+
+```bash
+cd ~/public_html
+git pull origin main
+# config.php n'est pas dans le dépôt — le créer une fois à la main si absent
+```
+
+### Vérifications après déploiement
+
+- [ ] https://anthonydev.fr/ — contenu à jour (projets, meta SEO)
+- [ ] https://anthonydev.fr/robots.txt — accessible
+- [ ] https://anthonydev.fr/sitemap.xml — accessible
+- [ ] https://anthonydev.fr/assets/og-image.jpg — accessible
+- [ ] https://www.anthonydev.fr/ — redirige vers https://anthonydev.fr/
+- [ ] Formulaire de contact — envoi test OK
+- [ ] [Google Search Console](https://search.google.com/search-console) — soumettre la sitemap
+
+### Première installation
+
+1. Créer une adresse email dans cPanel o2switch (`noreply@anthonydev.fr` ou `contact@anthonydev.fr`)
 2. Copier `config.sample.php` → `config.php` et configurer les adresses
-3. Uploader les fichiers dans `public_html/` (inclure `assets/anthony-portrait.jpg`)
+3. Uploader les fichiers dans `public_html/`
 4. Tester le formulaire de contact en production
 
 ## Formulaire de contact
