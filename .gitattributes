@@ -1,0 +1,10 @@
+# Fins de ligne LF dans le dépôt (standard web / serveur Linux)
+* text=auto eol=lf
+
+# Binaires — pas de conversion
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.ico binary
