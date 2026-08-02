@@ -528,8 +528,7 @@ ul {
 .profil__photo {
   width: 100%;
   aspect-ratio: 5 / 6;
-  object-fit: cover;
-  object-position: center top;
+  background: url("assets/anthony-portrait.jpg") center top / cover no-repeat;
 }
 
 .profil__name {
